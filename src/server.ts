@@ -10,6 +10,7 @@ import {
 } from 'fastify-type-provider-zod'
 import { env } from './env'
 import { accessInviteLinkRoute } from './routes/accessInviteLinkRoute'
+import { getSubscriberInviteClicksRoute } from './routes/getSubscriberInviteClicksRoute'
 import { subscribeToEventRoute } from './routes/subscribeToEventRoute'
 
 const fastify = Fastify().withTypeProvider<ZodTypeProvider>()
@@ -33,6 +34,7 @@ fastify.register(fastifySwaggerUi, {
 
 fastify.register(subscribeToEventRoute)
 fastify.register(accessInviteLinkRoute)
+fastify.register(getSubscriberInviteClicksRoute)
 
 fastify.register(cors, {
   origin: [`http://localhost:${env.PORT}`, env.API_URL_PROD],
