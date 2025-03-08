@@ -36,7 +36,10 @@ API para o projeto [DevStage](https://github.com/AleferReinert/devstage), desenv
 ## Tecnologias Utilizadas
 
 - **Biome:** Formatação de código.
+- **Drizzle:** ORM para TypeScript e JavaScript.
 - **Fastify:** Framework para Node.js.
+- **Postgres:** Banco de dados relacional.
+- **Redis:** Plataforma de banco de dados em tempo real.
 - **Swagger:** Documentação e testes de APIs.
 - **Zod:** Biblioteca de validação de schemas TypeScript-first.
 
