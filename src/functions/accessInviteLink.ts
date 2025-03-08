@@ -6,5 +6,5 @@ interface AccessInviteLinkParams {
 
 export async function accessInviteLink({ subscriberId }: AccessInviteLinkParams) {
   // Increment the access count for the subscriber
-  await redis.hincrby('referral: access-count', subscriberId, 1)
+  await redis.hincrby('referral:access-count', subscriberId, 1)
 }
