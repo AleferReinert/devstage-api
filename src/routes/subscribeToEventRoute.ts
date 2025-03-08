@@ -12,6 +12,7 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async fastify => {
         body: z.object({
           name: z.string(),
           email: z.string().email(),
+          referrer: z.string().nullish(),
         }),
         response: {
           201: z.object({
@@ -21,10 +22,10 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async fastify => {
       },
     },
     async (request, reply) => {
-      const { name, email } = request.body
+      const { name, email, referrer } = request.body
 
       // Create a subscription in the database
-      const { subscriberId } = await subscribeToEvent({ name, email })
+      const { subscriberId } = await subscribeToEvent({ name, email, referrerId: referrer })
       return reply.status(201).send({ subscriberId })
     }
   )
