@@ -41,6 +41,7 @@ API para o projeto [DevStage](https://github.com/AleferReinert/devstage), desenv
 - **Postgres:** Banco de dados relacional.
 - **Redis:** Plataforma de banco de dados em tempo real.
 - **Swagger:** Documentação e testes de APIs.
+- **tsup:** Empacotador de módulos TypeScript.
 - **Zod:** Biblioteca de validação de schemas TypeScript-first.
 
 ## URL do Projeto
