@@ -43,7 +43,7 @@ fastify.register(getSubscriberRankingPositionRoute)
 fastify.register(getRankingRoute)
 
 fastify.register(cors, {
-  origin: [`http://localhost:${env.PORT}`, env.API_URL_PROD],
+  origin: [`http://localhost:${env.PORT}`, env.WEB_URL],
 })
 
 fastify.listen({ port: env.PORT }).then(() => {

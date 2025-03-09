@@ -11,7 +11,6 @@ export async function getRanking() {
     subscriberIdAndScore[ranking[i]] = Number.parseInt(ranking[i + 1])
   }
 
-  console.log('IDs do Redis:', Object.keys(subscriberIdAndScore))
   const subscribers = await db
     .select()
     .from(subscriptions)
