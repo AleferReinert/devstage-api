@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"engines": {
-		"node": "22.14.0"
+		"node": "v22.11.0"
 	},
 	"scripts": {
 		"build": "tsup-node",
