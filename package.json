@@ -2,9 +2,13 @@
 	"name": "devstage-api",
 	"version": "1.0.0",
 	"main": "index.js",
+	"engines": {
+		"node": "22.14.0"
+	},
 	"scripts": {
+		"build": "tsup-node",
 		"dev": "tsx watch --env-file .env src/server.ts",
-		"build": "tsup-node"
+		"start": "node dist/server.js"
 	},
 	"author": "",
 	"license": "ISC",
