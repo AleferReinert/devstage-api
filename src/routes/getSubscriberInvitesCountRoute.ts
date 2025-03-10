@@ -7,6 +7,7 @@ export const getSubscriberInvitesCountRoute: FastifyPluginAsyncZod = async fasti
     '/subscribers/:subscriberId/ranking/count',
     {
       schema: {
+        operationId: 'getSubscriberInvitesCount',
         summary: 'Retorna a quantidade de usuários registrados através do convite personalizado',
         tags: ['Referral'],
         params: z.object({

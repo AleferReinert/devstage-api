@@ -9,6 +9,7 @@ export const accessInviteLinkRoute: FastifyPluginAsyncZod = async fastify => {
     '/invites/:subscriberId',
     {
       schema: {
+        operationId: 'accessInviteLink',
         summary: 'Incrementa um acesso ao contador de acessos do convite e redireciona para o site',
         tags: ['Referral'],
         params: z.object({

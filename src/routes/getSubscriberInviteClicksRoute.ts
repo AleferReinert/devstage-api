@@ -7,6 +7,7 @@ export const getSubscriberInviteClicksRoute: FastifyPluginAsyncZod = async fasti
     '/subscribers/:subscriberId/ranking/clicks',
     {
       schema: {
+        operationId: 'getSubscriberInviteClicks',
         summary: 'Retorna a quantidade de vezes que o convite foi acessado',
         tags: ['Referral'],
         params: z.object({
