@@ -43,10 +43,12 @@ fastify.register(getSubscriberRankingPositionRoute)
 fastify.register(getRankingRoute)
 
 fastify.register(cors, {
-  origin: [`http://localhost:${env.PORT}`, env.WEB_URL],
+  origin: [`http://localhost:${env.PORT}`, env.API_URL],
 })
 
 fastify.listen({ port: env.PORT }).then(() => {
-  console.log(`\x1b[1mDocs:\x1b[0m \x1b[34m${env.WEB_URL}/docs\x1b[0m`)
+  const url = env.NODE_ENV === 'development' ? `http://localhost:${env.PORT}` : env.API_URL
+
+  console.log(`\x1b[1mDocs:\x1b[0m \x1b[34m${url}/docs\x1b[0m`)
   console.log('\x1b[32m✓ HTTP Server running!\x1b[0m')
 })

@@ -40,9 +40,10 @@ API para o projeto [DevStage](https://github.com/AleferReinert/devstage), desenv
 - **Fastify:** Framework para Node.js.
 - **Postgres:** Banco de dados relacional.
 - **Redis:** Plataforma de banco de dados em tempo real.
-- **Render:** Hospedagem do banco de dados.
+- **Render:** Para hospedagem do node e postgres.
 - **Swagger:** Documentação e testes de APIs.
 - **tsup:** Empacotador de módulos TypeScript.
+- **Upstash:** Para hospedagem do redis.
 - **Zod:** Biblioteca de validação de schemas TypeScript-first.
 
 ## URL do Projeto
