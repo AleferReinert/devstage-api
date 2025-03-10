@@ -46,7 +46,7 @@ fastify.register(cors, {
   origin: [`http://localhost:${env.PORT}`, env.API_URL],
 })
 
-fastify.listen({ port: env.PORT }).then(() => {
+fastify.listen({ port: env.PORT, host: '0.0.0.0' }).then(() => {
   const url = env.NODE_ENV === 'development' ? `http://localhost:${env.PORT}` : env.API_URL
 
   console.log(`\x1b[1mDocs:\x1b[0m \x1b[34m${url}/docs\x1b[0m`)
