@@ -47,6 +47,6 @@ fastify.register(cors, {
 })
 
 fastify.listen({ port: env.PORT }).then(() => {
-  console.log(`\x1b[1mDocs:\x1b[0m \x1b[34mhttp://localhost:${env.PORT}/docs\x1b[0m`)
+  console.log(`\x1b[1mDocs:\x1b[0m \x1b[34m${env.WEB_URL}/docs\x1b[0m`)
   console.log('\x1b[32m✓ HTTP Server running!\x1b[0m')
 })
